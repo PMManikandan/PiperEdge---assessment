@@ -21,15 +21,14 @@ const cartTable = document.querySelector('.cart-table');
             const discount = (parseFloat(discountPercentage) / 100) * price;
             const discountPrice = price - discount;
 
-            // Add the item to the cart table
+           
             const row = cartTable.insertRow(1);
             row.innerHTML = `<td>${productId}</td><td>${name}</td><td>${price}</td><td>${discountPercentage}</td><td>${discountPrice.toFixed(2)}</td><td>${vendor}</td><td bgcolor="red"><button class="shop" onclick="removeFromCart(${productId}, ${discountPrice})">Remove Cart</button></td>`;
 
-            // Update total price
+      
             totalPrice += discountPrice;
             totalPriceDiv.textContent = `Total Price:Rs. ${totalPrice.toFixed(2)}`;
 
-            // Show the cart table
             cartTable.style.display = 'table';
         }
 
