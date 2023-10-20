@@ -1,0 +1,52 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size:30x;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(119, 118, 118);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table {
+    display: none;
+}
+
+#total-price {
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.product {
+    background-color: black;
+    color: #fff;
+    border-spacing: 2px;
+
+}
+
+.add{
+    background-color: green;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+.shop{
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
