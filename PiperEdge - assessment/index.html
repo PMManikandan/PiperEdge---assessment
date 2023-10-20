@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <center>Discount Table</center></h1>
+    <table id="discount-table">
+        <tr>
+            <th>Vendor</th>
+            <th>Trade A</th>
+            <th>Trade B</th>
+            <th>Trade C</th>
+            <th>Trade D</th>
+        </tr>
+        <tr>
+            <td>Vendor 1</td>
+            <td>12</td>
+            <td>12</td>
+            <td>0</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Vendor 2</td>
+            <td>10</td>
+            <td>8</td>
+            <td>20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Vendor 3</td>
+            <td>0</td>
+            <td>25</td>
+            <td>3</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Vendor 4</td>
+            <td>9</td>
+            <td>0</td>
+            <td>16</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Vendor 5</td>
+            <td>5</td>
+            <td>11</td>
+            <td>0</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <h1><center> Product Table </center></h1>
+    <table>
+        <tr class="product">
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Tags</th>
+            <th>Vendor</th>
+            <th>Add to Cart</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Product 1</td>
+            <td>25</td>
+            <td>Trade A,ice</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(1, 'Product 1', 25, 'Vendor 5', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Product 2</td>
+            <td>50</td>
+            <td>Trade B,ice2</td>
+            <td>Vendor 4</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(2, 'Product 2', 50, 'Vendor 4', 'Trade B')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Product 3</td>
+            <td>45.5</td>
+            <td>Trade A,test</td>
+            <td>Vendor 3</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(3, 'Product 3', 45.5, 'Vendor 3', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Product 4</td>
+            <td>87</td>
+            <td>Trade B,test</td>
+            <td>Vendor 2</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(4, 'Product 4', 87, 'Vendor 2', 'Trade B')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Product 5</td>
+            <td>450</td>
+            <td>Trade D,test</td>
+            <td>Vendor 1</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(5, 'Product 5', 450, 'Vendor 1', 'Trade D')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Product 6</td>
+            <td>170</td>
+            <td>Trade C,test</td>
+            <td>Vendor 3</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(6, 'Product 6', 170, 'Vendor 3', 'Trade C')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Product 7</td>
+            <td>237</td>
+            <td>Trade A,test</td>
+            <td>Vendor 3</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(7, 'Product 7', 237, 'Vendor 3', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Product 8</td>
+            <td>44</td>
+            <td>Trade A,test</td>
+            <td>Vendor 4</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(8, 'Product 8', 44, 'Vendor 4', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Product 9</td>
+            <td>31</td>
+            <td>Trade D,test</td>
+            <td>Vendor 4</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(9, 'Product 9', 31, 'Vendor 4', 'Trade D')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Product 10</td>
+            <td>750</td>
+            <td>Trade B,test</td>
+            <td>Vendor 2</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(10, 'Product 10', 750, 'Vendor 2', 'Trade B')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Product 11</td>
+            <td>457</td>
+            <td>Trade C,test</td>
+            <td>Vendor 1</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(11, 'Product 11', 457, 'Vendor 1', 'Trade C')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Product 12</td>
+            <td>253</td>
+            <td>Trade A,test</td>
+            <td>Vendor 4</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(12, 'Product 12', 253, 'Vendor 4', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Product 13</td>
+            <td>84</td>
+            <td>Trade D,test</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(13, 'Product 13', 84, 'Vendor 5', 'Trade D')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Product 14</td>
+            <td>75</td>
+            <td>Trade C,test</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(14, 'Product 14', 75, 'Vendor 5', 'Trade C')">Add to Cart</button></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Product 15</td>
+            <td>60</td>
+            <td>Trade B,test</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(15, 'Product 15', 60, 'Vendor 5', 'Trade B')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Product 16</td>
+            <td>57</td>
+            <td>Trade A,test</td>
+            <td>Vendor 1</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(16, 'Product 16', 57, 'Vendor 1', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Product 17</td>
+            <td>10</td>
+            <td>Trade C,test</td>
+            <td>Vendor 2</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(17, 'Product 17', 10, 'Vendor 2', 'Trade C')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Product 18</td>
+            <td>412.5</td>
+            <td>Trade D,test</td>
+            <td>Vendor 3</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(18, 'Product 18', 412.5, 'Vendor 3', 'Trade D')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Product 19</td>
+            <td>112.5</td>
+            <td>Trade B,test</td>
+            <td>Vendor 4</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(19, 'Product 19', 112.5, 'Vendor 4', 'Trade B')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Product 20</td>
+            <td>102</td>
+            <td>Trade B,test</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(20, 'Product 20', 102, 'Vendor 5', 'Trade B')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Product 21</td>
+            <td>52</td>
+            <td>Trade A,test</td>
+            <td>Vendor 3</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(21, 'Product 21', 52, 'Vendor 3', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Product 22</td>
+            <td>32</td>
+            <td>Trade C,test</td>
+            <td>Vendor 2</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(22, 'Product 22', 32, 'Vendor 2', 'Trade C')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Product 23</td>
+            <td>12</td>
+            <td>Trade B,test</td>
+            <td>Vendor 4</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(23, 'Product 23', 12, 'Vendor 4', 'Trade B')">Add to Cart</button></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Product 24</td>
+            <td>584.5</td>
+            <td>Trade D,test</td>
+            <td>Vendor 1</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(24, 'Product 24', 584.5, 'Vendor 1', 'Trade D')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Product 25</td>
+            <td>67</td>
+            <td>Trade B,test</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(25, 'Product 25', 67, 'Vendor 5', 'Trade D')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Product 26</td>
+            <td>132.5</td>
+            <td>Trade A,test</td>
+            <td>Vendor 5</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(26, 'Product 26', 132.5, 'Vendor 5', 'Trade A')">Add To Cart</button></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Product 27</td>
+            <td>42.5</td>
+            <td>Trade B,test</td>
+            <td>Vendor 2</td>
+            <td bgcolor="green"><button class="add" onclick="addToCart(27, 'Product 27', 42.5, 'Vendor 2', 'Trade B')">Add To Cart</button></td>
+        </tr>
+    </table>
+
+    <h1><center>Shopping Cart</center></h1>
+    <table class="cart-table">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Original Price</th>
+            <th>discount Percentage</th>
+            <th>Discount Price</th>
+            <th>Vendor</th>
+            <th>Remove cart</th>
+        </tr>
+    </table>
+
+    <h2><center>Total Price</center></h2>
+    <div id="total-price">Total Price:Rs. 0.00</div>
+    <script src="script.js"></script>
+</body>
+</html>
